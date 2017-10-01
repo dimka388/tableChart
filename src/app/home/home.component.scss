@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .column{
+        width: 50%;
+        margin: 0 10px;
+    }
+}

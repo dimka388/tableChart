@@ -1,0 +1,33 @@
+<div class="chart-holder">
+	<h3>{{chartTitle}}</h3>
+	<div class="table-chart" [ngClass]="{'loaded' : dataLoaded}">
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- <th class="id">ID</th> -->
+                    <th class="name">NAME</th>
+                    <th class="percentage">percentage</th>
+                    <th class="spend">spend</th>
+                    <th class="current">current</th>
+                    <th class="prev">prev</th>
+                    <th class="count">count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data.rowData">
+                    <!-- <td class="id">{{item.id}}</td> -->
+                    <td class="name">
+                        <span class="progress" [style.width]="(item.spend / maxValue) * 929 + 'px'"></span>
+                        <span class="text">{{item.name}}</span>
+                    </td>
+                    <td class="percentage">{{item.percentageDifference}}</td>
+                    <td class="spend">{{item.spend}}</td>
+                    <td class="current">{{item.spendCurrent}}</td>
+                    <td class="prev">{{item.spendPrevious}}</td>
+                    <td class="count">{{item.supplierCount}}</td>
+                </tr>
+            </tbody>
+        </table>
+		<div class="loader"><span>Loading...</span></div>
+	</div>
+</div>
