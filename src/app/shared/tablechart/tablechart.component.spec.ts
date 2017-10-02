@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { BarchartComponent } from './barchart.component';
+import { TablechartComponent } from './tablechart.component';
 
-describe('BarchartComponent', () => {
-  let component: BarchartComponent;
-  let fixture: ComponentFixture<BarchartComponent>;
+describe('TablechartComponent', () => {
+  let component: TablechartComponent;
+  let fixture: ComponentFixture<TablechartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BarchartComponent ]
+      declarations: [ TablechartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BarchartComponent);
+    fixture = TestBed.createComponent(TablechartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

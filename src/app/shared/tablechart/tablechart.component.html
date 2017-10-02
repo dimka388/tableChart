@@ -1,0 +1,24 @@
+<div class="chart-holder">
+	<h3>{{chartTitle}}</h3>
+	<div class="table-chart" [ngClass]="{'loaded' : dataLoaded}">
+        <table class="table" #table>
+            <thead>
+                <tr>
+                    <th *ngFor="let column of columns">{{column.title}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data.rowData">
+                    <td *ngFor="let column of columns">
+                        <div *ngIf="column.key !== 'name'">{{getColumnData(item, column.key)}}</div>
+                        <div *ngIf="column.key === 'name'">
+                            <span class="progress" [style.width]="getProgressWidth(item)"></span>
+                            <span class="text">{{item.name}}</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+		<div class="loader"><span>Loading...</span></div>
+	</div>
+</div>

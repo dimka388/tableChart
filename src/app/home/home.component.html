@@ -1,11 +1,47 @@
 <div class="row">
     <div class="column">
-        <app-tableChart *ngIf="chartData" [data]="chartData" chartTitle="Level 1 Category"></app-tableChart>
-        <app-tableChart *ngIf="chartData" [data]="chartData" chartTitle="Level 2 Category"></app-tableChart>
+        <app-tableChart
+            *ngIf="chartData"
+            chartTitle="Level 1 Category"
+            [data]="chartData"
+            [columns]="[
+                {'key': 'name', 'title': 'Name'},
+                {'key': 'supplierCount', 'title': 'Supplier'},
+                {'key': 'spend', 'title': 'Spend' },
+                {'key': 'percentageDifference', 'title': 'Change Y/Y'}
+             ]"></app-tableChart>
+        <app-tableChart
+            *ngIf="chartData"
+            chartTitle="Level 2 Category"
+            [data]="chartData"
+            [columns]="[
+                {'key': 'name', 'title': 'Name'},
+                {'key': 'supplierCount', 'title': 'Supplier'},
+                {'key': 'spend', 'title': 'Spend' },
+                {'key': 'percentageDifference', 'title': 'Change Y/Y'}
+            ]"></app-tableChart>
     </div>
     <div class="column">
-        <app-tableChart *ngIf="chartData" [data]="chartData" chartTitle="Portfolio Companies"></app-tableChart>
-        <app-tableChart *ngIf="chartData" [data]="chartData" chartTitle="Supplier List by Spend"></app-tableChart>
+        <app-tableChart
+            *ngIf="chartData"
+            chartTitle="Portfolio Companies"
+            [data]="chartData"
+            [columns]="[
+                {'key': 'name', 'title': 'Name'},
+                {'key': 'supplierCount', 'title': 'Supplier'},
+                {'key': 'spend', 'title': 'Spend' },
+                {'key': 'percentageDifference', 'title': 'Change Y/Y'}
+            ]"></app-tableChart>
+        <app-tableChart
+            *ngIf="chartData"
+            chartTitle="Supplier List by Spend"
+            [data]="chartData"
+            [columns]="[
+                {'key': 'name', 'title': 'Name'},
+                {'key': 'supplierCount', 'title': 'Supplier'},
+                {'key': 'spend', 'title': 'Spend' },
+                {'key': 'percentageDifference', 'title': 'Change Y/Y'}
+            ]"></app-tableChart>
     </div>
 </div> 
 

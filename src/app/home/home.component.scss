@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    max-width: 96vw;
+    margin: 0 auto;
     .column{
         width: 50%;
         margin: 0 10px;
